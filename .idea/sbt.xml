@@ -3,5 +3,17 @@
   <component name="ScalaSbtSettings">
     <option name="customLauncherPath" />
     <option name="customVMPath" />
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/programming-in-scala" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/programming-in-scala" />
+            <option value="$PROJECT_DIR$/programming-in-scala/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.8.3" />
+      </SbtProjectSettings>
+    </option>
   </component>
 </project>
