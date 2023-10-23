@@ -1,4 +1,5 @@
-import chapter12.{BasicIntQueue, Doubling, Filtering, Incrementing}
+package chapter12
+
 import org.scalatest.flatspec.AnyFlatSpec
 
 class QueueTest extends AnyFlatSpec {

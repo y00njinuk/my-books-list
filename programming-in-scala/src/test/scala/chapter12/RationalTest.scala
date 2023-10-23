@@ -1,4 +1,5 @@
-import chapter12.Rational
+package chapter12
+
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.must.Matchers
 import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
