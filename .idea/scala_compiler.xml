@@ -3,8 +3,6 @@
   <component name="ScalaCompilerConfiguration">
     <option name="compileOrder" value="ScalaThenJava" />
     <option name="incrementalityType" value="IDEA" />
-    <profile name="sbt 1" modules="programming-in-scala">
-      <option name="compileOrder" value="JavaThenScala" />
-    </profile>
+    <profile name="sbt 2" modules="functional-thinking,programming-in-scala" />
   </component>
 </project>
