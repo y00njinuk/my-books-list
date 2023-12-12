@@ -5,5 +5,8 @@ ThisBuild / scalaVersion := "2.13.12"
 lazy val root = (project in file("."))
   .settings(
     name := "programming-in-scala",
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.17" % "test"
+    libraryDependencies ++= Seq(
+      "org.scalatest" %% "scalatest" % "3.2.17" % "test",
+      "junit" % "junit" % "4.13.2" % "test"
+    )
   )
