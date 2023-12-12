@@ -28,8 +28,8 @@ abstract class Element {
   private def widen(w: Int): Element =
     if(w <= width) this
     else {
-      val left: Element.UniformElement = elem(' ', (w - width) / 2, height)
-      val right: Element.UniformElement = elem(' ', w - width - left.width, height)
+      val left = elem(' ', (w - width) / 2, height)
+      val right = elem(' ', w - width - left.width, height)
       left beside this beside right
     }
 
@@ -60,12 +60,12 @@ object Element {
     override def contents: Array[String] = Array.fill(height)(line)
   }
 
-  def elem(contents: Array[String]): ArrayElement =
+  def elem(contents: Array[String]): Element =
     new ArrayElement(contents)
 
-  def elem(chr: Char, width: Int, height: Int): UniformElement =
+  def elem(chr: Char, width: Int, height: Int): Element =
     new UniformElement(chr, width, height)
 
-  def elem(line: String): LineElement =
+  def elem(line: String): Element =
     new LineElement(line)
 }
