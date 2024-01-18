@@ -1,4 +1,4 @@
-package chatper15
+package chapter15
 
 object myTupleTest {
   def main(args: Array[String]): Unit = {

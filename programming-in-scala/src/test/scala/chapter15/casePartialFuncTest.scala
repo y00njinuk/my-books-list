@@ -1,4 +1,4 @@
-package chatper15
+package chapter15
 
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.must.Matchers
