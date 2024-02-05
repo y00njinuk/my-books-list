@@ -1,8 +1,8 @@
 package chapter13.QnA
 
 // https://github.com/databricks/scala-style-guide#privatethis
-class MyClass(private val field1: Int = _,
-              private[this] val field2: Int = _) {
+class MyClass(private val field1: Int,
+              private[this] val field2: Int) {
 
   def perSenstiveMethod(): Unit = {
     var i = 0
