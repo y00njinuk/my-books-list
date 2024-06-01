@@ -1,9 +1,9 @@
 package chapter11
 
 import org.scalatest.flatspec.AnyFlatSpec
-import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
+import org.scalatest.matchers.should.Matchers
 
-class ScalaEqualityTest extends AnyFlatSpec {
+class ScalaEqualityTest extends AnyFlatSpec with Matchers {
   "== or !=" should "only compare values, regardless of the type AnyVal or AnyRef" in {
     // AnyVal
     val intValue = 4
@@ -48,5 +48,25 @@ class ScalaEqualityTest extends AnyFlatSpec {
     val nullStr2 = null
     nullStr1 eq nullStr2 shouldBe true
     nullStr1 ne nullStr2 shouldBe false
+  }
+
+  "shouldEqual" should "compare value wrapped in object" in {
+    val opt1: Option[Int] = Some(42)
+    val opt2: Option[Int] = Some(42)
+    val opt3: Option[Int] = None
+
+    opt1 shouldEqual opt2
+    opt1 should not equal opt3
+
+    case class foo(field1: Int, field2: String, field3: Option[Long])
+    val foo1 = foo(1, "2", Option(3))
+    val foo2 = foo(1, "2", Option(3))
+
+    foo1 shouldEqual foo2
+
+    val optList1 = Option(List(1,2,3))
+    val optList2 = Option(List(1,2,3))
+
+    optList1 shouldEqual optList2
   }
 }
